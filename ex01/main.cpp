@@ -66,4 +66,21 @@ int main() {
 			std::cout << e.what() << std::endl;
 		}
 	}
+	{
+		Span sp(5);
+		sp.addNumber(6);
+		sp.addNumber(3);
+		sp.addNumber(17);
+		sp.addNumber(9);
+		sp.addNumber(11);
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	{
+		int zwerg = 123124;
+		Span t(zwerg);
+		t.addRange(0,zwerg);
+		std::cout << "shortest span is: " << t.shortestSpan() << std::endl;
+		std::cout << "longest span is: " << t.longestSpan() << std::endl;
+	}
 }

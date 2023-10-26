@@ -16,6 +16,7 @@ public:
 	~Span();
 
 	void addNumber(int input);
+	void addRange(int start, int end);
 	int shortestSpan();
 	int longestSpan();
 

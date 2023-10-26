@@ -8,7 +8,7 @@ Span::Span() : N(0)
 Span::Span(unsigned int init) : N(init)
 {}
 
-Span::Span(Span &src) : N(src.N)
+Span::Span(Span &src) : N(src.N), cont(src.cont)
 {}
 
 Span::~Span()
@@ -16,6 +16,7 @@ Span::~Span()
 
 Span &Span::operator=(const Span &src) {
 	this->N = src.N;
+	this->cont = src.cont;
 	return *this;
 }
 
@@ -52,6 +53,12 @@ int Span::shortestSpan() {
 
 int Span::longestSpan() {
 	return (*--this->cont.end() - *this->cont.begin());
+}
+
+void Span::addRange(int start, int end) {
+	for (int i = start; i < end; ++i) {
+		this->addNumber(i);
+	}
 }
 
 const char *Span::spanFullException::what() const throw() {
