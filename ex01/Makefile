@@ -1,7 +1,7 @@
 CXX = c++
 CFLAGS = -g -Wall -Wextra -Werror -std=c++98
 NAME = e
-SRC = main.cpp
+SRC = Span.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all : $(NAME)
