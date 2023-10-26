@@ -1,0 +1,8 @@
+//
+// Created by nreher on 10/26/23.
+//
+
+#ifndef CPP08_NOTFOUNDEXCEPTION_HPP
+#define CPP08_NOTFOUNDEXCEPTION_HPP
+
+#endif //CPP08_NOTFOUNDEXCEPTION_HPP
