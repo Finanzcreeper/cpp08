@@ -1,6 +1,7 @@
 #include "Span.hpp"
 #include <exception>
 #include <iostream>
+#include <algorithm>
 
 Span::Span() : N(0)
 {}
@@ -43,8 +44,7 @@ int Span::shortestSpan() {
 		return (smol);
 	for (unsigned int i = 0; i < this->N; ++i) {
 		diff = *two++ - *one++;
-		if (diff < smol)
-			smol = diff;
+		smol = std::min(diff,smol);
 		if (two == this->cont.end())
 			return (smol);
 	}
