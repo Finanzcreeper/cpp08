@@ -32,10 +32,10 @@ void Span::addNumber(int input) {
 int Span::shortestSpan() {
 	int diff;
 	int smol;
-	std::multiset<int>::iterator one = this->cont.begin();
+	std::multiset<int>::const_iterator one = this->cont.begin();
 	if ( one == this->cont.end())
 		throw (noSpanPossible());
-	std::multiset<int>::iterator two = ++this->cont.begin();
+	std::multiset<int>::const_iterator two = ++this->cont.begin();
 	if (two == this->cont.end())
 		throw (noSpanPossible());
 
